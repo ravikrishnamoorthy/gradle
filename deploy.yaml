@@ -1,0 +1,20 @@
+
+
+---
+- name: Deploy Spring Boot app with Docker
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Build Docker image
+      command: docker build -t myapp /home/ravi/Downloads/demo
+      environment:
+        ansible_python_interpreter: "/usr/bin/python3"  # Replace with the correct Python interpreter path
+
+    - name: Run Docker container
+      docker_container:
+        name: myapp_container
+        image: myapp
+        ports:
+          - "9097:9099"
+        detach: yes
