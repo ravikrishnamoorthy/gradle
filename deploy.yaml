@@ -7,7 +7,7 @@
 
   tasks:
     - name: Build Docker image
-      command: docker build -t myapp /home/ravi/Downloads/demo
+      command: docker build -t myapp /var/lib/jenkins/workspace/dockeransible
       environment:
         ansible_python_interpreter: "/usr/bin/python3"  # Replace with the correct Python interpreter path
 
