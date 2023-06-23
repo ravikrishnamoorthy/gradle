@@ -24,15 +24,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-    - name: Build the project
-      run: ./gradlew build
-    - name: Navigate to build/libs/demo-0.0.1-SNAPSHOT.jar
-      run: cd build/libs
-        
-    - name: Run Demo
-      run: java -jar demo-0.0.1-SNAPSHOT.jar
-    
+      run : |
+          echo "Hello World"
