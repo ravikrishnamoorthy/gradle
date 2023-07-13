@@ -4,10 +4,10 @@
   become_user: jenkins
 
   tasks:
-    - name: Clean and Build
-      shell: ./gradlew clean build
-      args:
-        chdir: /home/ravi/Downloads/demo
+   # - name: Clean and Build
+    #  shell: ./gradlew clean build
+     # args:
+      #  chdir: /home/ravi/Downloads/demo
 
     - name: Run the Application
       shell: java -jar build/libs/demo-0.0.1-SNAPSHOT.jar &
