@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   tasks:
+  become_user: jenkins
     - name: Clean and Build
       shell: ./gradlew clean build
       args:
