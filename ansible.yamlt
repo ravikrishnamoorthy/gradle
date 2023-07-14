@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: yes
+  become_user: jenkins
+
+  tasks:
+    - name: Run the Application
+      dir: /var/lib/jenkins/workspace/dockeransible
+      command: ./start.sh
