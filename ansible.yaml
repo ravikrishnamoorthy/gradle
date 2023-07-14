@@ -5,5 +5,6 @@
 
   tasks:
     - name: Run the Application
-      dir: /var/lib/jenkins/workspace/dockeransible
-      command: ./start.sh
+      shell:
+        cmd: ./start.sh
+        chdir: /var/lib/jenkins/workspace/dockeransible
