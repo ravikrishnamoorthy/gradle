@@ -1,0 +1,14 @@
+
+---
+- hosts: 13.233.89.77
+  remote_user: root
+  tasks:
+    - name: Copy the file from jenkins localhost to ubuntu server
+      copy:
+        src: /var/lib/jenkins/workspace/dockeransible/build/libs/demo-0.0.1-SNAPSHOT.jar
+        dest: /root/ansible
+    - name: to move the application directory
+      command: sh -c "cd /root/ansible"
+
+    - name: run tha jar file in ubuntu server
+      command: sh -c " java -jar demo-0.0.1-SNAPSHOT.jar"
