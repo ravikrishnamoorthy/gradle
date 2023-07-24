@@ -4,7 +4,7 @@
 - name: Deploy Spring Boot app with Docker
   hosts: localhost
   become: true
-  become_user: jenkins
+  become_user: root
   tasks:
     - name: Build Docker image
       command: docker build -t myapp /var/lib/jenkins/workspace/dockeransible
